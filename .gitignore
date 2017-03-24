@@ -1,0 +1,5 @@
+# ignore all jpg, dat, csv, txt files
+*.dat
+*.jpg
+*.csv
+*.txt

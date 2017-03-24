@@ -40,7 +40,7 @@ unsigned long time;
  * @param kd -- (tentative: 5.5) maybe .025
  * @param Direction -- (tentative REVERSE)
  */
-PID tempController(&Celsius, &Output, &Setpoint, 100, 0, 0, REVERSE);
+PID tempController(&Celsius, &Output, &Setpoint, 100, 65, 50, REVERSE);
 
 
 void setup() {
@@ -49,8 +49,8 @@ void setup() {
   pinMode(peltier, OUTPUT);
   Wire.begin();
   Celsius = getTemperature();
-  Setpoint = 10.0;
-  //tempController.SetSampleTime(100);
+  Setpoint = 12.5;
+  tempController.SetSampleTime(1000);
   tempController.SetOutputLimits(0, 255);
   tempController.SetMode(AUTOMATIC);
 }
