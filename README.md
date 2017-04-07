@@ -2,7 +2,7 @@
 
 ## Overview
 This is a project I worked on at Lawrence Berkeley National Laboratory. The intent was to create a cost effective
-temperature controller based on the PID library for Arduino.
+temperature PID controller with an Arduino.
 
 ## Prerequisites
 The current setup is:
@@ -10,9 +10,10 @@ The current setup is:
 - TMP 102 temperature sensor
 - Sparkfun Mosfet Power Control Kit.
 - CPU cooler.
+- Thermoelectric cooler (Peltier).
 - Two power supplies, one for the fan, and another for the Mosfet.
 
-You must have the latest version of Arduino installed. Processing is optional, to output serial data.
+You must have the latest version of Arduino installed, and the PID library. Processing is optional to output serial data.
 
 ## Operating
 - Set Power supply for fan to 12v, .5A
